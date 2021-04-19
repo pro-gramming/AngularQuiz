@@ -1,0 +1,21 @@
+# This file is for Pandey to understand what I have done in this repo.
+
+1. First I created the Docker file 
+2. Then I have created the docker ignore file which will tell which files and directories to not include.
+
+3. Finally to you need to create the containers after creating the image 
+
+4. But first for creating the docker image run below in directory where Dockerfile exists:
+  > docker build -t angular:v1 . ( prepend sudo , if permission denied come across ) 
+
+5. Now the images should have been created , to list the images :
+  > docker image list   ||    > docker images 
+
+6. Now to create the container with image run: 
+  > docker run -d --name pandeybhosadika -p 8080:80 angular:v1 
+
+7. Now the container should be up - now just access the application on your machine or VM Ip addr on port 8080 like: 
+  > <Ip address>:8080
+
+8. Good luck 
+
