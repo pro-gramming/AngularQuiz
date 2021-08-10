@@ -12,7 +12,7 @@
   > docker image list   ||    > docker images 
 
 6. Now to create the container with image run: 
-  > docker run -d --name pandeybhosadika -p 8080:80 angular:v1 
+  > docker run -d --name staging -p 8080:80 angular:v1 
 
 7. Now the container should be up - now just access the application on your machine or VM Ip addr on port 8080 like: 
   > <Ip address>:8080
