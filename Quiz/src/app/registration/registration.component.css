@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&dispaly=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+.Image_Background{
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+}
+.mat-elevation-z6{
+    position: absolute;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.enter_btn{
+    color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+.enter_btn:hover{
+    background:#007bff;
+    color:#fff;
+}
+.main-div mat-card{
+    padding:0px;
+    position: absolute;
+    width: 500px;
+    height:250px;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+                0px 4px 8px 0 rgba(0,0,0,0.2);
+}
+.login-form{
+    padding:20px;
+}

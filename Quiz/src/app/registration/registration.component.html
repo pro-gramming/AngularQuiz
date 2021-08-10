@@ -1,0 +1,24 @@
+<!--Image_Background-->
+<img src="https://thumbs.dreamstime.com/z/seamless-border-school-elements-back-to-school-pattern-welcome-modern-thin-line-icons-supplies-super-sale-doodles-vector-97783606.jpg" class="Image_Background">
+<!-- NavBar -->
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <div class="spacer"></div>
+    <span style="font-weight: 600; font-size: 40px;">QUIZ</span>
+    <div class="spacer"></div>
+</mat-toolbar>
+
+<!-- Login Box -->
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25"><mat-toolbar style="color: honeydew;background: linear-gradient(180deg, #007bff, #bad7f7);text-align: center;justify-content: center;">REGISTER</mat-toolbar>
+        
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" #loginForm="ngForm" (ngSubmit)="OnSubmit(Name.value,Email.value)">
+            <mat-form-field>
+                <input matInput placeholder="Username" required #Name>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="email" placeholder="E-mail" required #Email>
+            </mat-form-field>
+            <button mat-raised-button type="submit" class="enter_btn">ENTER</button>
+        </form>
+    </mat-card>
+</div>

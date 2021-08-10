@@ -1,0 +1,81 @@
+<!--Image_Background-->
+<img src="https://thumbs.dreamstime.com/z/seamless-border-school-elements-back-to-school-pattern-welcome-modern-thin-line-icons-supplies-super-sale-doodles-vector-97783606.jpg" class="Image_Background">
+<!--Nav-Bar-InfoBox-->
+<mat-toolbar color="primary" class="mat-elevation-z6" *ngIf="!test">
+    <span style="font-weight: 400;">Hi {{name}} !</span>
+</mat-toolbar>
+<!--Nav-Bar-QuizBox-->
+<mat-toolbar color="primary" class="mat-elevation-z6" *ngIf="test && currentQuiz<10">
+    <span style="font-weight: 400;">QUIZ</span>
+    <div class="spacer"></div>
+    <mat-button style="cursor: unset;margin-right: 10px;">Timer : </mat-button>
+    <a mat-raised-button color="accent" style="cursor: unset; font-weight: 600;height:auto;width:8px;padding:2px;"><countdown #cd [config]="{ leftTime: 600, format: 'mm:ss' }"></countdown></a>
+</mat-toolbar>
+<!--Nav-Bar-ResultBox-->
+<mat-toolbar color="primary" class="mat-elevation-z6" *ngIf="result">
+    <div class="spacer"></div>
+    <span style="font-weight: 600; font-size: 40px;">QUIZ</span>
+    <div class="spacer"></div>
+    <!-- <a mat-raised-button color="accent">Contact Us!</a> -->
+</mat-toolbar>
+<!--Info Box-->
+<div class="info_box" *ngIf="!test && info" style="background-color: honeydew;">
+    <div class="info_title">
+        <span>Some Rules Of The Quiz</span>
+    </div>
+    <div class="info_list">
+        <div class="info">1. This quiz consist of <span>10</span> Questions</div>
+        <div class="info">2. Once you select your answer, <span>you can't reselect</span>.</div>
+        <div class="info">3. You'll get points on the basis of your <span>correct answers</span>.</div>
+        <div class="info">4. You'll need <span>atleast 8 </span>correct answers to pass.</div>
+        <div class="info">5. You'll get <span>10 minutes </span>to complete the test.</div>
+    </div>
+    <div class="buttons">
+        <button class="quit" (click)="getDg()">Quit</button>
+        <button class="restart"  (click)="showTest()">OK</button>
+    </div>
+</div>
+<!--Quiz Box-->
+<div class="quiz_box" *ngIf="currentQuiz<10 && test" style="background-color: honeydew;">
+    <header>
+        <div class="title">QUIZ</div>
+        <div class="timer">
+            <div class="time_text">Question</div>
+            <div class="timer_sec">{{currentQuiz+1}}</div>
+        </div>
+    </header>
+    <section>
+        <div class="que_text">
+            <span style="line-height: 1.5;">{{ quizzes[currentQuiz].question }} ?</span>
+        </div>
+        <div class="option_list">
+            <div class="option" *ngFor="let quiz of quizzes[currentQuiz].answer"> 
+                <span><input type="radio" style="cursor: pointer;" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
+                    {{quiz.option}}</span>
+            </div>
+        </div>
+    </section>
+</div>
+<!--Result Button-->
+<div class="start_btn" (click)="showResult()" *ngIf="currentQuiz>9"><button>RESULT</button></div>
+<!--Result Box_(Pass)-->
+<div class="result_box" *ngIf="result && correctAnswers>7" style="background-color: honeydew;">
+    <div class="complete_text"> Congratulations {{name}} !</div>
+    <div class="score_text">
+        <span>You got<p style="color: green;">{{correctAnswers}}</p>out of<p>10</p></span>
+    </div>
+    <div class="buttons">
+        <a routerLink="/register"><button class="exit">EXIT</button></a>
+    </div>
+</div>
+<!--Result Box_(Fail)-->
+<div class="result_box" *ngIf="result && correctAnswers<8" style="background-color: honeydew;">
+    <div class="complete_text"> Oops !! {{name}}</div>
+    <div class="score_text">
+        <span>You got only<p style="color: red;">{{correctAnswers}}</p>out of<p>10</p></span>
+    </div>
+    <div class="buttons">
+        <a routerLink="/register"><button class="exit">EXIT</button></a>
+    </div>
+</div>
+
