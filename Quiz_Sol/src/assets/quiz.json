@@ -1,0 +1,82 @@
+[{
+    "question":"Which player scored fastest hat-trick in EPL ",
+    "answer":[
+      {"option":"Frank Lampard","correct":false},
+      {"option":"Steven Gerrard","correct":false},
+      {"option":"Sadio Mane","correct":true}
+    ]
+  },
+  {
+    "question":"Which player has made the most EPL appearences ",
+    "answer":[
+      {"option":"Gareth Bale","correct":false},
+      {"option":"Gareth Barry","correct":true},
+      {"option":"Rio Ferdinand","correct":false}
+    ]
+  },
+  {
+    "question":"Which player holds the record of getting most red cards ",
+    "answer":[
+      {"option":"Ashley Cole","correct":false},
+      {"option":"Patrick Vieira","correct":true},
+      {"option":"Wayne Rooney","correct":false}
+    ]
+  },
+  {
+    "question":"Who is the Premier League's all-time top scorer ",
+    "answer":[
+      {"option":"Alan Shearer","correct":true},
+      {"option":"Cristiano Ronaldo","correct":false},
+      {"option":"Paul Scholes","correct":false}
+    ]
+  },
+  {
+    "question":"When was the inaugral Premier League season",
+    "answer":[
+      {"option":"1996-97","correct":false},
+      {"option":"1898-99","correct":false},
+      {"option":"1992-93","correct":true}
+    ]
+  },
+  {
+    "question":"Which team won the first Premier League title ",
+    "answer":[
+      {"option":"Everton","correct":false},
+      {"option":"Liverpool","correct":false},
+      {"option":"Manchester United","correct":true}
+    ]
+  },
+  {
+    "question":"Which goalkeeper has best record in Premier League ",
+    "answer":[
+      {"option":"New York","correct":true},
+      {"option":"Chicago","correct":false},
+      {"option":"Petr Cech","correct":false}
+    ]
+  },
+  {
+    "question":"Who scored the fastest goal in EPL history ",
+    "answer":[
+      {"option":"Robert Leewandowski","correct":false},
+      {"option":"Cristiano Ronaldo","correct":false},
+      {"option":"Shane Long","correct":true}
+    ]
+  },
+  {
+    "question":"How many clubs competed in the inaugral Premier League season ",
+    "answer":[
+      {"option":"20","correct":false},
+      {"option":"22","correct":true},
+      {"option":"25","correct":false}
+    ]
+  },
+  {
+    "question":"Which player won the Premier League Golden Boot in 2018-19 ",
+    "answer":[
+      {"option":"Luis Suarez","correct":false},
+      {"option":"James Vardy","correct":false},
+      {"option":"Pierre-Emrik Aubameyang","correct":true}
+    ]
+  }
+
+]
